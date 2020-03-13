@@ -20,6 +20,8 @@ python ./create.py /Users/Jerry/Desktop/demo.png /Users/Jerry/Desktop/dmeo
 只需要在配置`config`文件里边新增即可。
 
 
+### 最后只需要将文件和json文件复制到iOS工程的assets中即可。
+
 
 
 
