@@ -12,4 +12,21 @@
 # 添加140
 # imageSizes  =[10，100，140]
 #
-imageSizes = [20,29,40,60,76,128,1000]
+imageSizes = [[20,20,"ipad"],
+[29,29,"iphone","ipad"],
+[40,40,"ipad"],
+[76,76,"ipad"],
+[128,128,"mac"],
+[1024,1024,"ios-marketing"]]
+
+imageSizesDouble = [[20,20,"iphone","ipad"],
+                    [29,29,"iphone","ipad"],
+                    [40,40,"iphone","ipad"],
+                    [60,60,"iphone"],
+                    [76,76,"ipad"],
+                    [83.8,83.5,"ipad"]]
+
+imageSizesThree = [[20,20,"iphone"],
+[29,29,"iphone"],
+[40,40,"iphone"],
+[60,60,"iphone"]]
