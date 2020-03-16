@@ -40,6 +40,8 @@ imageSizesThree = [[20,20,"iphone"],
 ```
 
 
+### 最后只需要将文件和json文件复制到iOS工程的assets中即可。
+
 
 
 
