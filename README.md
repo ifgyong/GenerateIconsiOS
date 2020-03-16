@@ -17,7 +17,27 @@ python ./create.py /Users/Jerry/Desktop/demo.png /Users/Jerry/Desktop/dmeo
 ### 想要生成其他的任意大小任意多个怎么办？
 
 
-只需要在配置`config`文件里边新增即可。
+只需要在配置`config`文件里边新增即可
+
+```
+一倍图文件夹 "ipad"是用到ipad上，可以同时多个'iphone','ipad'
+imageSizes = [[20,20,"ipad"],
+[29,29,"iphone","ipad"],
+[40,40,"ipad"]]
+二倍图
+imageSizesDouble = [[20,20,"iphone","ipad"],
+                    [29,29,"iphone","ipad"],
+                    [40,40,"iphone","ipad"],
+                    [60,60,"iphone"],
+                    [76,76,"ipad"],
+                    [83.8,83.5,"ipad"]]
+                    
+三倍图        
+imageSizesThree = [[20,20,"iphone"],
+[29,29,"iphone"],
+[40,40,"iphone"],
+[60,60,"iphone"]]
+```
 
 
 
