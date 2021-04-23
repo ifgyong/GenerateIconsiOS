@@ -24,7 +24,7 @@ imageSizesDouble = [[20,20,"iphone","ipad"],
                     [40,40,"iphone","ipad"],
                     [60,60,"iphone"],
                     [76,76,"ipad"],
-                    [83.8,83.5,"ipad"]]
+                    [83.5,83.5,"ipad"]]
 
 imageSizesThree = [[20,20,"iphone"],
 [29,29,"iphone"],

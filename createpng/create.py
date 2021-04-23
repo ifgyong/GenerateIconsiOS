@@ -49,7 +49,9 @@ def create():
 def createjosn(path,js):
     allpath = path+"Contents.json"
     # if os._exists(allpath):
-    os.remove(allpath)#删除旧文件
+    if os.path.isfile(allpath):
+        os.remove(allpath)#删除旧文件
+    os.system('touch allpath')
     f = open(path+"Contents.json",'a')
     if f.write(json.dumps(js))>0:
         print('\033[31m' + "✅ json文件写入成功 🍺🍺🍺🏃" + '\033[0m')
@@ -95,15 +97,33 @@ outPutPath = os.path.expanduser('~') + '/Desktop/AppIcon/'
 #
 # ImageName = sys.argv[1]
 # # print('图片名字为：' + ImageName)
-originImg = Image.open('/Users/Jerry/Desktop/复软/BI系统元素/icons/logo@2x.png')
+originImg = Image.open('/Users/Jerry/Desktop/12.jpeg')
 # try:
 #     originImg = Image.open(ImageName)
 # except:
 #     print ('\033[31m' + '\'' + ImageName + '\'' + '，该文件不是图片文件，请检查文件路径.' + '\033[0m')
 #     quit()
 
-
+#  检查第三方包是否安装
+def check_requirement(package):
+    try:
+        exec("import {0}".format(package))
+    except ModuleNotFoundError:
+        inquiry = input("This script requires {0}. Do you want to install {0}? [y/n]".format(package))
+        while (inquiry != "y") and (inquiry != "n") and (inquiry != "N") and (inquiry != "Y") :
+            inquiry = input("This script requires {0}. Do you want to install {0}? [y/n]".format(package))
+        if inquiry == "y" or inquiry == "Y":
+            import os
+            print("Execute commands: pip install {0}".format(package))
+            if int(sys.version.split('.')[0])==2:
+                os.system("pip install {0}".format(package))
+            elif int(sys.version.split('.')[0])==3:
+                os.system("pip3 install {0}".format(package))
+        else:
+            print("{0} is missing, so the program exits!".format(package))
+            exit(-1)
 if __name__ == '__main__':
-    # for i in sys.argv:
-    #     print(i)
+    check_requirement('PIL')
+    for i in sys.argv:
+        print(i)
     create()
